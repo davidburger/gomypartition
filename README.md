@@ -34,6 +34,7 @@ gomypartition --help #or gomypartition h
 ```
 * **docker-test**, dt  - Create partitioned table in docker (see .env settings) and insert random records there
 * **info**             - Read and display partition info for specified table
+* **maintenance**      - Process time-series based partition maintenance for specified table
    
 ### Docker test command
 Command "gomypartition docker-test" creates partitioned table in docker container and it inserts random records there.
