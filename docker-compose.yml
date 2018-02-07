@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb:10.3
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_DATABASE: partition_test
+
+  adminer:
+    image: adminer
+    environment:
+      VIRTUAL_HOST: "adminer.docker"
+    ports:
+      - 8080:8080
+
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    stop_signal: SIGTERM
+    volumes:
+      - ./:/projects/golang
+    links:
+      - db
