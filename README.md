@@ -1,5 +1,5 @@
 # gomypartition
-Time-series partitioning automation tool for MySQL/MariaDB databases
+Time-series partitioning tool for MySQL/MariaDB databases
 
 ## Docker
 Docker (https://www.docker.com/get-docker) is used for testing. 
